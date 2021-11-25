@@ -1,10 +1,3 @@
-class foo:
-    bar = 5
-
-class baz:
-    def print_baz(self):
-        print(self.bar)
-
-myfoo = foo()
-myfoo.blah = baz.print_baz
-myfoo.blah()
+from javautil import op_codes as op
+code = op.bipush(2) + op.bipush(3)
+print(code.to_bytes())
